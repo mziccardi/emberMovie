@@ -1,3 +1,17 @@
 <h2>Movie reviews</h2>
 {{add-movie}}
+  {{#if model}}
+    {{#each model as |movie|}}
+      <div class='movieCard'>
+        <h2 class='card-movie-title'>{{movie.title}} </h2>
+        <h4> Date Released: {{movie.date}}</h4>
+        <h4> Review: {{movie.review}}</h4>
+        <h4> Rating: {{movie.rating}} ★</h4>
+      </div>
+    {{/each}}
+    {{else}}
+      <p>
+        You have not added any movies. Please add some!
+      </p>
+  {{/if}}
 {{outlet}}
