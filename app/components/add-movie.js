@@ -7,6 +7,9 @@ export default Ember.Component.extend({
     addMovie(){
       const movie = this.getProperties('title', 'date', 'review');
       this.get('store').createRecord('movie', movie).save()
+      .then(()=>{
+        this.setProperties({title:'', date:'', review:''})
+      })
     }
   }
 });

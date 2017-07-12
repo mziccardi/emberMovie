@@ -3,10 +3,14 @@
   {{#if model}}
     {{#each model as |movie|}}
       <div class='movieCard'>
-        <h4>{{movie.title}}</h4>
-        <h4>{{movie.date}}</h4>
-        <h4>{{movie.review}}</h4>
+        <h2 class='card-movie-title'>{{movie.title}} </h2>
+        <h6> Date Released: {{movie.date}}</h6>
+        <h6> Review: {{movie.review}}</h6>
       </div>
     {{/each}}
+    {{else}}
+      <p>
+        You have not added any movies. Please add some!
+      </p>
   {{/if}}
 {{outlet}}
