@@ -5,10 +5,10 @@ export default Ember.Component.extend({
 
   actions:{
     addMovie(){
-      const movie = this.getProperties('title', 'date', 'review');
+      const movie = this.getProperties('title', 'date', 'review','rating');
       this.get('store').createRecord('movie', movie).save()
       .then(()=>{
-        this.setProperties({title:'', date:'', review:''})
+        this.setProperties({title:'', date:'', review:'', rating:''})
       })
     }
   }
