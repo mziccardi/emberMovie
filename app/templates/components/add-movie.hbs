@@ -1,4 +1,4 @@
-{{!-- add movie action on submit --}}
+
 <form class="add-movie-form" {{action 'addMovie' on='submit'}}>
   <label>
     Title:
@@ -10,13 +10,13 @@
   </label>
   <label>
     Review:
-    {{input class='notes-input' type='text' value=review}}
+    {{input class='review-input' type='text' value=review}}
   </label>
   <label>
     Rating:
     {{input class='ratings-input' type='number' min='1' max='5' value=rating placeholder='1-5 Stars'}}
   </label>
-    <button class= 'submit-new-btn'>
+    <button class='submit-new-btn'>
       Submit
     </button>
 </form>
