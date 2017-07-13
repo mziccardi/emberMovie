@@ -11,6 +11,16 @@ test('visiting /', function(assert) {
   });
 });
 
+test('there should be no movies at first',function(assert){
+  visit('/');
+
+  andThen(function(){
+    assert.equal(find('.movie').length,0)
+    assert.equal(find('.no-movies').text().trim(), 'You have not added any movies. Please add some!')
+  })
+})
+
+
 test('The user should be able to create a new movie review', function(assert){
   visit('/');
 
@@ -29,5 +39,6 @@ test('The user should be able to create a new movie review', function(assert){
     assert.equal(find('.card-movie-date').text().trim(), 'Date Released: 2005', 'Should show date')
     assert.equal(find('.card-movie-review').text().trim(), 'Review: Written and directed by Louis CK. HILARIOUS', 'Should show review')
     assert.equal(find('.card-movie-rating').text().trim(), 'Rating: 5 ★', 'Should show rating')
+    assert.equal(find('.movie').length, 1)
   })
 })
