@@ -1,3 +1,16 @@
 .ratings-input{
   width:100px;
 }
+.left{
+  float: left;
+  width:100%;
+}
+.right{
+  float: right;
+  margin-right: 20%;
+  border: black solid;
+  width: 30%;
+}
+.view-movie{
+  padding-left: 15px;
+}
