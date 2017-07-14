@@ -1,3 +1,9 @@
 .ratings-input{
   width:100px;
 }
+.right{
+  float: right;
+  margin-right: 20%;
+  border: black solid;
+  width: 30%;
+}
