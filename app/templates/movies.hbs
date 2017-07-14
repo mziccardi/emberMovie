@@ -1,3 +1,4 @@
+<div class='left'>
 <h2>Movie reviews</h2>
 {{add-movie}}
   {{#if model}}
@@ -6,7 +7,7 @@
         {{#link-to 'movies.movie' movie}}
         <h2 class='card-movie-title'>{{movie.title}} </h2>
         {{/link-to}}
-        
+
       </div>
     {{/each}}
     {{else}}
@@ -14,4 +15,7 @@
         You have not added any movies. Please add some!
       </p>
   {{/if}}
+</div>
+
+
 {{outlet}}

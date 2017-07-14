@@ -1,8 +1,10 @@
 <div class='right'>
-  <h3 class='view-title'>{{model.title}}</h3>
-  <h4 class='card-movie-date'> Date Released: {{model.date}}</h4>
-  <h4 class='card-movie-review'> Review: {{model.review}}</h4>
-  <h4 class='card-movie-rating'> Rating: {{model.rating}} ★</h4>
+  <div class='view-movie'>
+    <h3 class='view-title'>{{model.title}}</h3>
+    <h4 class='card-movie-date'> Date Released: {{model.date}}</h4>
+    <h4 class='card-movie-review'> Review: {{model.review}}</h4>
+    <h4 class='card-movie-rating'> Rating: {{model.rating}} ★</h4>    
+  </div>
 </div>
 {{!-- THIS IS WHERE YOU WANT TO BRING IN THE REMOVEMOVIE COMPONENT TEMPLATE  --}}
 {{outlet}}
